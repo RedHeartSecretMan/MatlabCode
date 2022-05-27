@@ -32,8 +32,8 @@ clc, clear;
 % ------------------------------------------------------------------------
 
 %% set path and segmentation parameters
-SavePath = '/Users/WangHao/工作/纳米光子中心/全光相关/数据-0325/CCPs/F-actin'; 
-DataPath = '/Users/WangHao/工作/纳米光子中心/全光相关/数据-0325/CCPs';
+SavePath = '/Volumes/昊大侠/工作/纳米光子中心/全光相关/数据-0325/CCPs/F-actin'; 
+DataPath = '/Volumes/昊大侠/工作/纳米光子中心/全光相关/数据-0325/CCPs';
 DataFilter = 'RawSIMData_level_*.mrc';
 GtFilter = 'SIM_gt.mrc';
 

@@ -1,19 +1,14 @@
-function [cs,index] = SortNat(c,mode)
-
+function [s,index] = SortNat(c,mode)
 % ------------------------------------------------------------------------
-% SortNat: Natural order sort of cell array of strings.
-% usage:  [S,INDEX] = sort_nat(C)
+% SortNat is natural order sort of cell array of strings.
+% Usage:  [cs,index] = SortNat(c,mode)
 %
-% where,
-%    C is a cell array (vector) of strings to be sorted.
-%    S is C, sorted in natural order.
-%    INDEX is the sort order such that S = C(INDEX);
+% Where,
+%    c is a cell array (vector) of strings to be sorted.
+%    mode is ascend or descend.
+%    s is c, sorted in natural order.
+%    index is the sort order such that s = c(index);
 %
-% Natural order sorting sorts strings containing digits in a way such that
-% the numerical value of the digits is taken into account.  It is
-% especially useful for sorting file names containing index numbers with
-% different numbers of digits.  Often, people will use leading zeros to get
-% the right sort order, but with this function you don't have to do that.
 % For example, if C = {'file1.txt','file2.txt','file10.txt'}, a normal sort
 % will give you
 %
@@ -22,11 +17,10 @@ function [cs,index] = SortNat(c,mode)
 % whereas, sort_nat will give you
 %
 %       {'file1.txt'  'file2.txt'  'file10.txt'}
-%
 % ------------------------------------------------------------------------
 
 
-% 当没有设置模式时：Set default value for mode if necessary.
+% 当没有设置模式时:Set default value for mode if necessary.
 if nargin < 2
     mode = 'ascend';
 end
@@ -89,5 +83,5 @@ if is_descend
     index = index(end:-1:1);
 end
 index = reshape(index,size(c));
-cs = c(index);
+s = c(index);
 end

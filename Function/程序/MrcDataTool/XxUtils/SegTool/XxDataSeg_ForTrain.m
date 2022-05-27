@@ -55,6 +55,7 @@ end
 Y = 1:l;
 X = 1:r;
 [X,Y] = meshgrid(Y,X);
+% 记录每一个有效点的坐标作为锚点
 point_list = zeros(sum(mask(:)),2);
 point_list(:,1) = Y(mask(:));
 point_list(:,2) = X(mask(:));
